@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
+    <title>Doconut Viewer - .NET 6.0 - Modal</title>
+
+    <!-- jQuery & Bootstrap -->
+    <script src="~/scripts/jquery.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+
+    <link href="~/css/viewer.css" rel="stylesheet" />
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        #divDocViewer {
+            width: 100%;
+            border-radius: 6px;
+            background-color: whitesmoke;
+            border: 1px grey;
+            margin-top: 10px;
+        }
+
+        /* IMP: This css is required to avoid bootstrap css shrinking the main viewer */
+
+        .row {
+            margin-right: 0;
+            margin-left: 0
+        }
+      
+        /* end css */
+
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="https://doconut.com" target="_blank">.NET Core 6.0 (Modal)</a>&nbsp;<div class="loader"></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#">
+                            Sample Files
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.doc');">Word Doc</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.xls');">Excel Sheet</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.ppt');">Power Point</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.pdf');">Acrobat Pdf</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.tif');">Tiff Document</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Page Content -->
+
+    <div class="row">
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog mw-100 w-100 mh-80 h-80">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div><a href="javascript:void(0);" onclick="ZoomIn();" class="btn btn-primary btn-sm">&nbsp;Zoom-In&nbsp;</a>&nbsp;&nbsp;<a href="javascript:void(0);" onclick="ZoomOut();" class="btn btn-info btn-sm">Zoom-Out</a></div>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="divDocViewer">
+                            <div id="div_ctlDoc"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-dismiss="modal">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/scripts/splitter.js"></script>
+    <script src="~/scripts/docViewer.js"></script>
+    <script src="~/scripts/documentLinks.js"></script>
+
+    <script>
+        var loader = $(".loader");
+
+        var objctlDoc = null;
+        var isMobile = false;
+        var resizing = false;
+        var docViewerDiv = $("#divDocViewer");
+        var w = 0;
+        var h = 0;
+        var docInstances = [];
+
+        loader.hide();
+
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            isMobile = true;
+        }
+
+        function ZoomIn() {
+            objctlDoc.Zoom(true);
+        }
+
+        function ZoomOut() {
+            objctlDoc.Zoom(false);
+        }
+
+        function Resize(orientation) {
+
+            if (resizing) { return; }
+
+            resizing = true;
+
+            w = document.documentElement.clientWidth;
+            h = document.documentElement.clientHeight;
+
+
+            var xdec = 50;
+            var ydec = 80;
+
+            if (isMobile) {
+                xdec = 50;
+                ydec = 80;
+
+                if (typeof orientation !== 'undefined') {
+                    if (orientation === "landscape") {
+                        w = document.documentElement.clientHeight;
+                        h = document.documentElement.clientWidth;
+                    }
+                }
+            }
+
+            docViewerDiv.width(w - xdec);
+            docViewerDiv.height(h - ydec - 150);
+
+            resizing = false;
+        }
+
+
+        $('#myModal').on('shown.bs.modal', function () {
+            // Refresh the viewer
+            setTimeout(function () {
+
+                objctlDoc.Refit();
+                objctlDoc.GotoPage(1);
+                objctlDoc.FitType('width');
+                objctlDoc.HideThumbs(false);
+                $("#div_ctlDoc_divThumbs").scrollTop(0);
+
+            }, 500);
+        });
+
+        function ctlDoc_OnViewerBusy() {
+            loader.show();
+        }
+
+        function ctlDoc_OnViewerReady() {
+            loader.hide();
+        }
+
+
+        function OpenDocument(fileName) {
+
+            if (typeof docInstances["'" + fileName + "'"] !== 'undefined') {
+                objctlDoc.View(docInstances["'" + fileName + "'"]);
+                $('#myModal').modal('show');
+                return;
+            }
+
+            loader.show();
+
+            $.ajax({
+                type: "POST",
+                cache: false,
+                async: true,
+                url: "/Home/OpenDocument?fileName=" + fileName,
+                success: function (data) {
+
+                    docInstances["'" + fileName + "'"] = data;
+
+                    objctlDoc.View(data);
+                    $('#myModal').modal('show');
+                },
+                error: function (err) {
+                    alert("Unable to open document. Error: " + err.responseText);
+                    loader.hide();
+                }
+            });
+        }
+
+        $(window).on("load", function () {
+            objctlDoc = $("#div_ctlDoc").docViewer(
+                {
+                    showThumbs: true,
+                    autoFocus: true,
+                    autoPageFocus: false,
+                    pageZoom: 75,
+                    zoomStep: 10,
+                    maxZoom: 200,
+                    format: 'png',
+                    FitType: 'width',
+                    debugMode: true,
+                    showToolTip: true,
+                    cacheEnabled: false,
+                    autoLoad: false,
+                    toolTipPageText: 'Page ',
+                    BasePath: '/',
+                    ResPath: 'images',
+                    largeDoc: true,
+                    showHyperlinks: true,
+                    fixedZoom: true,
+                    fixedZoomPercent: 100,
+                    fixedZoomPercentMobile: 75
+                });
+
+            Resize();
+        });
+
+
+        if (isMobile) {
+            $(window).on("orientationchange", function (event) { Resize(event.orientation); });
+        }
+        else {
+            $(window).on("resize", function () { Resize(); });
+        }
+
+
+        function GoFS() {
+
+            if (
+                document.fullscreenElement ||
+                document.webkitFullscreenElement ||
+                document.mozFullScreenElement ||
+                document.msFullscreenElement
+            ) {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            } else {
+                var element = $('#divDocViewer').get(0);
+
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                }
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>

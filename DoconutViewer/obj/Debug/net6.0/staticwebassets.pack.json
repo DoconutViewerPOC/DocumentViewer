@@ -1,0 +1,421 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\DoconutViewer.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DoconutViewer.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\Doconut.lic",
+      "PackagePath": "staticwebassets\\Doconut.lic"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\css\\viewer.css",
+      "PackagePath": "staticwebassets\\css\\viewer.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.dcm",
+      "PackagePath": "staticwebassets\\files\\Sample.dcm"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.doc",
+      "PackagePath": "staticwebassets\\files\\Sample.doc"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.eml",
+      "PackagePath": "staticwebassets\\files\\Sample.eml"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.html",
+      "PackagePath": "staticwebassets\\files\\Sample.html"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.mpp",
+      "PackagePath": "staticwebassets\\files\\Sample.mpp"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.msg",
+      "PackagePath": "staticwebassets\\files\\Sample.msg"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.pdf",
+      "PackagePath": "staticwebassets\\files\\Sample.pdf"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.ppt",
+      "PackagePath": "staticwebassets\\files\\Sample.ppt"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.psd",
+      "PackagePath": "staticwebassets\\files\\Sample.psd"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.svg",
+      "PackagePath": "staticwebassets\\files\\Sample.svg"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.tif",
+      "PackagePath": "staticwebassets\\files\\Sample.tif"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.vsd",
+      "PackagePath": "staticwebassets\\files\\Sample.vsd"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.xls",
+      "PackagePath": "staticwebassets\\files\\Sample.xls"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\Sample.xps",
+      "PackagePath": "staticwebassets\\files\\Sample.xps"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\files\\sample.dwg",
+      "PackagePath": "staticwebassets\\files\\sample.dwg"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\copy.cur",
+      "PackagePath": "staticwebassets\\images\\copy.cur"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\error.gif",
+      "PackagePath": "staticwebassets\\images\\error.gif"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\grab.cur",
+      "PackagePath": "staticwebassets\\images\\grab.cur"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\grabbing.cur",
+      "PackagePath": "staticwebassets\\images\\grabbing.cur"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\page-loader.gif",
+      "PackagePath": "staticwebassets\\images\\page-loader.gif"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\spacer.gif",
+      "PackagePath": "staticwebassets\\images\\spacer.gif"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\images\\thumb-loader.gif",
+      "PackagePath": "staticwebassets\\images\\thumb-loader.gif"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\scripts\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\docViewer.UI.js",
+      "PackagePath": "staticwebassets\\scripts\\docViewer.UI.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\docViewer.js",
+      "PackagePath": "staticwebassets\\scripts\\docViewer.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\documentLinks.js",
+      "PackagePath": "staticwebassets\\scripts\\documentLinks.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\basic.css",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\basic.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\basic.min.css",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\basic.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\dropzone-amd-module.js",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\dropzone-amd-module.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\dropzone-amd-module.min.js",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\dropzone-amd-module.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\dropzone.css",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\dropzone.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\dropzone.js",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\dropzone.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\dropzone.min.css",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\dropzone.min.css"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\dropzone\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\scripts\\dropzone\\dropzone.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\jquery.min.js",
+      "PackagePath": "staticwebassets\\scripts\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\samples\\DoconutViewer\\DoconutViewer\\wwwroot\\scripts\\splitter.js",
+      "PackagePath": "staticwebassets\\scripts\\splitter.js"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.DoconutViewer.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.DoconutViewer.props",
+      "PackagePath": "build\\DoconutViewer.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.DoconutViewer.props",
+      "PackagePath": "buildMultiTargeting\\DoconutViewer.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.DoconutViewer.props",
+      "PackagePath": "buildTransitive\\DoconutViewer.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

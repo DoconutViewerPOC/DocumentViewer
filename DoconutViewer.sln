@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoconutViewer", "DoconutViewer\DoconutViewer.csproj", "{2C20BB97-0569-47CC-8987-E961E796DAB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C20BB97-0569-47CC-8987-E961E796DAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C20BB97-0569-47CC-8987-E961E796DAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C20BB97-0569-47CC-8987-E961E796DAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C20BB97-0569-47CC-8987-E961E796DAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A2F983F-11E9-4F70-A7EB-6091486FA778}
+	EndGlobalSection
+EndGlobal

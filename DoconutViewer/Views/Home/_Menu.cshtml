@@ -1,0 +1,114 @@
+﻿<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="https://doconut.com" target="_blank">.NET 6.0</a>&nbsp;<div class="loader"></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav ml-auto">
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Sample Files
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.doc');">Word Doc</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.xls');">Excel Sheet</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.ppt');">Power Point</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.pdf');">Acrobat Pdf</a></li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.eml');">Email Message</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.mpp');">Project File</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.vsd');">Visio Drawing</a></li>
+                        <li><div class="dropdown-divider"></div></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.tif');">Tiff Document</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.dwg');">CAD Drawing</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.psd');">Photoshop</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="OpenDocument('Sample.svg');">SVG Graphics</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);" onclick="OpenUpload();">Upload File</a>
+                </li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Navigation
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.GotoPage(1);">First</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.Next(false);">Previous</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.Next(true);">Next</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.GotoPage(parseInt(objctlDoc.TotalPages()));">Last</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Rotate
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="RotateDocument(1);">90</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="RotateDocument(2);">180</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="RotateDocument(3);">270</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="RotateDocument(0);">None</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Flip
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="FlipDocument('X');">X</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="FlipDocument('Y');">Y</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="FlipDocument('XY');">XY</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="FlipDocument('');">None</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Zoom
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.Zoom(true);">In</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.Zoom(false);">Out</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.Zoom(25);">25 %</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.Zoom(100);">100 %</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.FitType('width');">Fit Width</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.FitType('height');">Fit Height</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.FitType('');">Fit None</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+                        Thumbnails
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.ThumbSize('small');">Small</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.ThumbSize('normal');">Normal</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.ThumbSize('large');">Large</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.HideThumbs(true);">Hide Thumbs</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.HideThumbs(false);">Show Thumbs</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.HideSplitter(true);">Splitter Off</a></li>
+                        <li><a class="dropdown-item" href="javascript:void(0)" onclick="objctlDoc.HideSplitter(false);">Splitter On</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0)" onclick="CloseDocument();">Close</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="javascript:void(0);" onclick="PrintDocument();">Print File</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript:void(0);" onclick="GoFS();">Full Screen</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/Modal">Modal</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

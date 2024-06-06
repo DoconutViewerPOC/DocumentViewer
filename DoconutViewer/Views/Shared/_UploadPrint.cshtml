@@ -1,0 +1,61 @@
+﻿    <!--Modal: Upload-->
+<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Upload Document</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+
+
+                <div id="dropZoneForm" class="dropzone">
+                    <div class="dz-message">
+                        Click or drop your document here
+                    </div>
+                    <div>
+                        <div class="fallback">
+                            <input name="file" id="file" type="file" />
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary btn-rounded btn-md" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--Modal: Upload-->
+<!--Modal: Print-->
+<div class="modal fade" id="modalPrint" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+
+        <!--Content-->
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Print Document</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!--Body-->
+            <div class="modal-body mb-0 p-0">
+
+                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                    <iframe id="printFrame" class="embed-responsive-item" src=""></iframe>
+                </div>
+
+            </div>
+
+        </div>
+        <!--/.Content-->
+
+    </div>
+</div>
+<!--Modal: Print-->

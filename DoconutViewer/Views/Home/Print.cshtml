@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="/scripts/jquery.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <style type="text/css">
+
+        table {
+            page-break-inside: auto
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto
+        }
+
+        #divPrint {
+            display: none;
+        }
+
+        @@media print {
+            #non-printable {
+                display: none;
+            }
+
+            #divPrint {
+                display: block;
+            }
+
+            @@page {
+                size: A4; /* If you want to provide default page size */
+                margin: 5mm 5mm 5mm 5mm; /* Adjust margins as required */
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: table;
+                table-layout: fixed;
+                height: auto;
+            }
+        }
+
+        img {
+            float: left;
+        }
+
+        #divProgress {
+            margin: 2px;
+            background-color: #28a745;
+            height: 28px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            border-radius: 6px;
+        }
+
+        /* You can define your own, Adjust values for page margins */
+
+        .A4Page {
+            width: 210mm;
+            height: 297mm;
+        }
+
+        .LegalPage {
+            width: 215.9mm;
+            height: 355.6mm;
+        }
+    </style>
+</head>
+<body>
+    <div id="divPrint"></div>
+    <div id="non-printable">
+        <div class="container">
+            <div class="row"><p></p></div>
+            <div class="row">
+                <form class="form">
+                    <div class="form-group form-inline">
+                        <label>Page Range&nbsp;</label>
+                        <input type="text" id="txtFrom" class="form-control" style="width:50px" value="1" />&nbsp;:&nbsp;<input type="text" id="txtTo" class="form-control" style="width:50px" />
+                        <br />
+                    </div>
+                    <div class="form-group form-inline">
+                        <label>Zoom Level&nbsp;</label>
+                        <input type="text" id="txtZoom" class="form-control" style="width:80px" value="100" />
+                        <br />
+                    </div>
+                    <div class="form-group form-inline">
+                        <label>Paper&nbsp;</label>
+                        <select id="drpPaper" style="width:150px" class="form-control"><option value="">Custom</option><option value="A4Page" selected>A4</option><option value="LegalPage">Legal</option></select>
+                        <br />
+                    </div>
+                    <div class="form-group form-inline">
+                        <label>Landscape&nbsp;</label>
+                        <input id="chkLandscape" class="form-control" type="checkbox" />
+                        <br />
+                    </div>
+                    <div class="form-group form-inline">
+                        <input type="button" class="btn btn-success btn-rounded btn-md" id="btnPrint" onclick="DoPrint();" value="Print" />&nbsp;
+                        <button type="button" id="btnClose" class="btn btn-outline-primary btn-rounded btn-md" onclick="Close();">Close</button>
+                    </div>
+                </form>
+            </div>
+            <div class="row">
+                <div id="divProgress" style="width: 90%">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        function GetBaseUrl() {
+            // Fix this url as required by your application
+            return '';
+        }
+
+        var totalp = 0;
+        var steps = 1;
+        var pageFrom = 0;
+        var pageTo = 0;
+        var pageZoom = 0;
+        var token = "";
+        var objdivPrint = null;
+
+        function PrintPages(from, to, zoom) {
+            if (from > to) {
+                alert("wrong page range");
+                return;
+            }
+            totalp = 0;
+
+            pageFrom = from;
+            pageTo = to;
+            pageZoom = zoom;
+
+            token = getQueryVariable("token");
+
+            steps = Math.ceil(parseInt($("#divProgress").width())) / ((to - from) + 1);
+
+            document.getElementById("divProgress").style.visibility = "visible";
+            document.getElementById("divProgress").style.width = "0px";
+
+            var cssPaper = $('#drpPaper').val();
+            var pagePrintCss = "";
+
+            if (cssPaper.length > 0) {
+                pagePrintCss = cssPaper;
+            }
+
+
+            // code to rotate the pages
+            if ($("#chkLandscape").prop('checked')) {
+
+                for (var j = from; j <= to; j++) {
+                    $.post(GetBaseUrl() + "/DocImage.axd?token=" + token + "&zoom=" + pageZoom + "&action=1&rotate=90&page=" + j, function (data) { });
+                }
+
+                sleep(5);
+            }
+
+
+            for (var i = from; i <= to; i++) {
+                var pgImg = document.createElement("IMG");
+                pgImg.id = "img" + i;
+
+
+                pgImg.src = GetBaseUrl() + "/DocImage.axd?token=" + token + "&zoom=" + zoom + "&page=" + i;
+                // If you don't want to print annotations then..  + "&AnnMode=1";
+
+                pgImg.className = pagePrintCss;
+
+                objdivPrint.appendChild(pgImg);
+                pgImg.onload = function () { LoadCount((pageTo - pageFrom) + 1) };
+            }
+
+        }
+
+        function sleep(seconds) {
+            var e = new Date().getTime() + (seconds * 1000);
+            while (new Date().getTime() <= e) { }
+        }
+
+        function LoadCount(t) {
+
+            totalp = totalp + 1;
+            document.getElementById("divProgress").style.width = parseInt($("#divProgress").width()) + steps + "px";
+            document.getElementById("divProgress").innerHTML = "Page " + totalp;
+
+            if (totalp === t) {
+
+                $('#non-printable').remove();  // Ie9 fix
+
+                setTimeout(function () { self.focus(); window.print(); Close(); }, 2000);
+            }
+        }
+
+        function DoPrint() {
+
+            document.getElementById("btnPrint").disabled = 'disabled';
+
+            objdivPrint = document.getElementById("divPrint");
+
+            ClearControls();
+
+            objdivPrint.innerText = "";
+
+            var startPage = document.getElementById("txtFrom").value;
+            var endPage = document.getElementById("txtTo").value;
+            var zoomLevel = document.getElementById("txtZoom").value;
+
+            PrintPages(startPage, endPage, zoomLevel);
+        }
+
+        function Close() {
+            self.parent.ClosePrint();
+        }
+
+        function ClearControls() {
+            var x = objdivPrint.childNodes.length;
+
+            for (i = x - 1; i > -1; i--) {
+                if ('undefined' != objdivPrint.childNodes[i].id) {
+                    var objToRemove = document.getElementById(objdivPrint.childNodes[i].id);
+                    if (null != objToRemove) {
+                        objdivPrint.removeChild(objToRemove);
+                    }
+                }
+            }
+        }
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+        }
+
+        var p = getQueryVariable("printpage");
+        if (typeof (p) != "undefined") {
+            document.getElementById("non-printable").style.display = "none";
+            var zoom = getQueryVariable("printzoom");
+
+            if (typeof (zoom) == "undefined") {
+                zoom = "100";
+            }
+
+            PrintPages(p, p, zoom);
+        }
+        else {
+            document.getElementById("txtTo").value = getQueryVariable("printtotal");
+            document.getElementById("divProgress").style.visibility = "hidden";
+        }
+    </script>
+</body>
+</html>
